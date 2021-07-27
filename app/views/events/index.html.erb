@@ -1,0 +1,25 @@
+<div id="dl"></div>
+<script src="//unpkg.com/@sjaakp/dateline/dist/dateline.js"></script>
+<% events = @events.map{|e| "{id: '#{e.id}', start: '#{e.date}', text: '#{e.title}'}"}.to_s.gsub("\"", "") %>
+<script>
+  dateline('dl', {
+    begin: '2020-08-01',
+    end: '2021-08-01',
+  	bands: [
+  {
+          	size: '70%',
+          	scale: Dateline.DAY,
+          	interval: 100
+  },
+  {
+          	size: '30%',
+          	scale: Dateline.MONTH,
+          	interval: 100,
+  	layout: 'overview'
+  }
+  	],
+  	events: <%= events.html_safe %>,
+    size: "100vh",
+  	});
+</script>
+<%= link_to 'New Event', new_event_path %>
