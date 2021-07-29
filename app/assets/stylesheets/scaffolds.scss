@@ -2,10 +2,22 @@
     color: green;
 }
 
+.error_notification {
+    background-color: rgb(255, 82, 82);
+    padding: 0.5rem;
+    display: inline-block;
+    color: white;
+}
+
 .field_with_errors {
-    padding: 2px;
-    background-color: red;
-    display: table;
+    // padding: 2px;
+    // display: table;
+    .error {
+        background-color: rgb(255, 82, 82);
+        padding: 0.5rem;
+        display: inline-block;
+        color: white;
+    }
 }
 
 #error_explanation {

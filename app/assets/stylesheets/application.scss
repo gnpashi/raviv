@@ -18,8 +18,11 @@
 *::before,
 *::after {
     box-sizing: border-box;
+    font-family: 'Rubik', sans-serif;
+    // line-height: 1;
 }
 
 body {
     margin: 0;
+    background: #e2eaf3;
 }

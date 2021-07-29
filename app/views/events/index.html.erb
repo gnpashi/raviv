@@ -1,18 +1,19 @@
-<div id="dl"></div>
+<div id="dl" style='line-height:1'></div>
 <script src="//unpkg.com/@sjaakp/dateline/dist/dateline.js"></script>
-<% events = @events.map{|e| "{id: '#{e.id}', start: '#{e.date}', text: '#{e.title}'}"}.to_s.gsub("\"", "") %>
+<% events = all_events %>
 <script>
   dateline('dl', {
     begin: '2020-08-01',
     end: '2021-08-01',
+  	url: "<%= request.base_url + "/events/" %>",
   	bands: [
   {
-          	size: '70%',
+          	size: '80%',
           	scale: Dateline.DAY,
           	interval: 100
   },
   {
-          	size: '30%',
+          	size: '20%',
           	scale: Dateline.MONTH,
           	interval: 100,
   	layout: 'overview'
@@ -21,5 +22,60 @@
   	events: <%= events.html_safe %>,
     size: "100vh",
   	});
+  
+  	document.querySelectorAll(".d-marker").forEach(e => {
+  		switch (e.innerText || e.innerHTML) {
+  			case 'Jan':
+  				e.innerText = 'ינואר'
+  				e.innerHTML = 'ינואר'
+  				break;
+  			case 'Feb':
+  				e.innerText = 'פברואר'
+  				e.innerHTML = 'פברואר'
+  				break;
+  			case 'Mar':
+  				e.innerText = 'מרץ'
+  				e.innerHTML = 'מרץ'
+  				break;
+  			case 'Apr':
+  				e.innerText = 'אפריל'
+  				e.innerHTML = 'אפריל'
+  				break;
+  			case 'May':
+  				e.innerText = 'מאי'
+  				e.innerHTML = 'מאי'
+  				break;
+  			case 'Jun':
+  				e.innerText = 'יוני'
+  				e.innerHTML = 'יוני'
+  				break;
+  			case 'Jul':
+  				e.innerText = 'יוני'
+  				e.innerHTML = 'יוני'
+  				break;
+  			case 'Aug':
+  				e.innerText = 'אוגוסט'
+  				e.innerHTML = 'אוגוסט'
+  				break;
+  			case 'Sept':
+  				e.innerText = 'ספטמבר'
+  				e.innerHTML = 'ספטמבר'
+  				break;
+  			case 'Oct':
+  				e.innerText = 'אוקטובר'
+  				e.innerHTML = 'אוקטובר'
+  				break;
+  			case 'Nov':
+  				e.innerText = 'נובמבר'
+  				e.innerHTML = 'נובמבר'
+  				break;
+  			case 'Dec':
+  				e.innerText = 'דצמבר'
+  				e.innerHTML = 'דצמבר'
+  				break;
+  			default:
+  			}
+  
+  	})
 </script>
-<%= link_to 'New Event', new_event_path %>
+<%= link_to '+', new_event_path, class: 'add-event' %>
