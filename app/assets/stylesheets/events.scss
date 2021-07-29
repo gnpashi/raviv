@@ -3,7 +3,7 @@
 // You can use Sass (SCSS) here: https://sass-lang.com/
 #dl {
     margin-top: 5vh;
-    line-height: 1;
+    line-height: 1.5;
 }
 
 .d-band-0 {
@@ -42,8 +42,17 @@
     }
 }
 
+.d-event {
+    font-size: 1.5rem;
+}
+
 .d-close {
     float: left !important;
+}
+
+.destroy {
+    text-decoration: none;
+    color: red;
 }
 
 .add-event {

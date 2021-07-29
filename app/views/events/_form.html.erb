@@ -15,4 +15,5 @@
   <div class="form-actions">
     <%= f.button :submit, "סיום" %>
   </div>
+  <%= link_to 'מחיקת האירוע', @event, data: {confirm: 'בדוק?'}, class: "destroy", method: :delete %>
 <% end %>
