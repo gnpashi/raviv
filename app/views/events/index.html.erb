@@ -1,4 +1,4 @@
-<div id="dl" style='line-height:1'></div>
+<div id="dl"></div>
 <script src="//unpkg.com/@sjaakp/dateline/dist/dateline.js"></script>
 <% events = all_events %>
 <script>
@@ -20,7 +20,7 @@
   }
   	],
   	events: <%= events.html_safe %>,
-    size: "100vh",
+    size: "90vh",
   	});
   
   	document.querySelectorAll(".d-marker").forEach(e => {

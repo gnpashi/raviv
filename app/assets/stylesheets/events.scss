@@ -1,6 +1,11 @@
 // Place all the styles related to the Events controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: https://sass-lang.com/
+#dl {
+    margin-top: 5vh;
+    line-height: 1;
+}
+
 .d-band-0 {
     background-color: #e2eaf3 !important;
 }
@@ -33,7 +38,7 @@
 
 .add-event {
     position: fixed;
-    bottom: 2rem;
+    bottom: calc(5vh + 2rem);
     left: 10px;
     text-decoration: none;
     color: #5281B7;
