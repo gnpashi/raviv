@@ -50,3 +50,5 @@ gem 'tzinfo-data', platforms: [:mingw, :mswin, :x64_mingw, :jruby]
 gem "simple_form", "~> 5.1"
 
 gem "htmlbeautifier", "~> 1.3", :group => :development
+
+gem "rails_real_favicon", "~> 0.1.1", :group => :development
