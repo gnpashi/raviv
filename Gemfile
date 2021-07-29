@@ -52,3 +52,5 @@ gem "simple_form", "~> 5.1"
 gem "htmlbeautifier", "~> 1.3", :group => :development
 
 gem "rails_real_favicon", "~> 0.1.1", :group => :development
+
+gem "aws-sdk-s3", require: false

@@ -1,3 +1,4 @@
+<%= image_tag @event.image, data: {action: "click->event#image"} if @event.image.present? %>
 <h2>
   <%= @event.title %>
 </h2>
