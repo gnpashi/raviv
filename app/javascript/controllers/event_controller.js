@@ -12,7 +12,10 @@ import { Controller } from "stimulus"
 export default class extends Controller {
 
     image(e) {
-        console.log("image");
         e.target.closest(".d-bubble").classList.toggle("image")
+    }
+    image_upload(e) {
+        const file = e.target.files[0]
+        document.querySelector(".image-upload").src = URL.createObjectURL(file)
     }
 }
